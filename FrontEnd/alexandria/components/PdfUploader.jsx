@@ -91,27 +91,52 @@ const PdfUploader = () => {
   };
 
   return (
-    <div>
-      <input type="file" accept=".pdf" onChange={handleFileChange} />
-      {/* <button onClick={handleFileUpload}>Upload PDF</button> */}
-      <Button variant="gradient" className="flex items-center gap-3" onClick={handleFileUpload}>
-        <CloudArrowUpIcon strokeWidth={2} className="h-5 w-5" /> Upload Files
+    <div className="flex items-center flex-row justify-center gap-4">
+      <div>
+        <div className="flex flex-col items-center">
+        <input
+      type="file"
+      accept=".pdf"
+      onChange={handleFileChange}
+      className="opacity-0 absolute top-0 left-0 h-full w-full cursor-pointer"
+    />
+      <Button
+        variant="gradient"
+        className="flex items-center gap-3"
+        onClick={handleFileUpload}
+      >
+        <CloudArrowUpIcon strokeWidth={2} className="h-5 w-5" />
+        Upload Files
       </Button>
-      
+      </div>
+    </div>
+
+    <div>
+      <div className="flex flex-col items-center">
       <input
         type="url"
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         placeholder="Enter a PDF URL"
+        className="mb-2"
       />
-      {/* <button onClick={handleUrlUpload}>Upload PDF from URL</button> */}
-      <Button variant="gradient" className="flex items-center gap-3" onClick={handleUrlUpload}>
-        <CloudArrowUpIcon strokeWidth={2} className="h-5 w-5" /> Submit URL
+      <Button
+        variant="gradient"
+        className="flex items-center gap-3"
+        onClick={handleUrlUpload}
+      >
+        <CloudArrowUpIcon strokeWidth={2} className="h-5 w-5" />
+        Submit URL
       </Button>
-      <div>
-        <LoadingProgressBar progress={progress} />
-      </div>
     </div>
+    </div>
+    
+  
+  <div className="w-full mt-4">
+    <LoadingProgressBar progress={progress} />
+  </div>
+</div>
+
   );
 };
 
