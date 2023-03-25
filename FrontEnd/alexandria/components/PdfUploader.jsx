@@ -94,7 +94,7 @@ const PdfUploader = () => {
     <div>
       <input type="file" accept=".pdf" onChange={handleFileChange} />
       {/* <button onClick={handleFileUpload}>Upload PDF</button> */}
-      <Button variant="gradient" className="flex items-center gap-3" onClick={handleFileChange}>
+      <Button variant="gradient" className="flex items-center gap-3" onClick={handleFileUpload}>
         <CloudArrowUpIcon strokeWidth={2} className="h-5 w-5" /> Upload Files
       </Button>
       
