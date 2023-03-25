@@ -1,0 +1,5 @@
+git subtree push --prefix Backend heroku master
+
+or 
+
+git subtree push --prefix frontEnd/Alexandria/ heroku master

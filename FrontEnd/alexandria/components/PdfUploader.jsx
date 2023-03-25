@@ -98,7 +98,7 @@ const PdfUploader = () => {
       type="file"
       accept=".pdf"
       onChange={handleFileChange}
-      className="opacity-0 absolute top-0 left-0 h-full w-full cursor-pointer"
+      
     />
       <Button
         variant="gradient"
