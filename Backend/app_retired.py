@@ -113,10 +113,10 @@ def upload_file():
 # Search
 @app.route('/search', methods=['GET'])
 def search_api():
-    query = request.args.get('query', '')
-    results = search(index, query)
-    print(results)
+    query = request.args.get('query')
+    results = search(writer, query)
     return jsonify(results)
+
 
 
 if __name__ == "__main__":
