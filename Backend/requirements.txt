@@ -1,0 +1,5 @@
+Flask==2.2.3
+flask-cors==3.0.10
+PyPDF2==1.26.0
+requests==2.26.0
+whoosh==2.7.4

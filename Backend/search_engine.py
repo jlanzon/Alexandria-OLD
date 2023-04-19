@@ -1,3 +1,5 @@
+#search_engine.py
+
 import os
 from whoosh.index import create_in, open_dir
 from whoosh.fields import Schema, TEXT, ID
